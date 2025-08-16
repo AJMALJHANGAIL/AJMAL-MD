@@ -1,19 +1,20 @@
 {
-  "name": "legendx-md-deploy",
-  "version": "5.0.0",
-  "description": "Deploy-ready LegendX-MD WhatsApp bot scaffold",
+  "name": "legendx-md-panel",
+  "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
-  },
-  "engines": {
-    "node": ">=18"
   },
   "dependencies": {
     "@whiskeysockets/baileys": "^6.6.0",
     "pino": "^9.0.0",
     "qrcode-terminal": "^0.12.0",
+    "qrcode": "^1.5.1",
     "express": "^4.19.2",
-    "dotenv": "^16.4.5"
+    "archiver": "^5.3.1",
+    "dotenv": "^16.0.0"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
