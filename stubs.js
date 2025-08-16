@@ -1,4 +1,3 @@
-
 const { categories } = require('./menu');
 
 module.exports = ({ cmd, PREFIX }) => {

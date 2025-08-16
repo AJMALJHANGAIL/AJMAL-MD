@@ -1,0 +1,21 @@
+{
+  "name": "LegendX-MD",
+  "description": "WhatsApp MD bot (LegendX-MD) - deployable",
+  "repository": "",
+  "env": {
+    "SESSION_ID": {
+      "description": "(optional) base64 creds json",
+      "required": false
+    },
+    "OPENAI_API_KEY": {
+      "description": "(optional) OpenAI API key",
+      "required": false
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}

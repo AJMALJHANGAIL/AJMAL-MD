@@ -1,4 +1,3 @@
-
 const categories = {
   '🪀 GROUP-CMD': [
     'antic','welcome','goodbye','online','delete','groupstats','add','poll','tagall','tagadmins','description','left','join','groupname','ginfo','getgpp','kick','invite','mute','lockgc','promote','demote','revoke','unlockgc','unmute','opentime','closetime','hidetag','vcf'
@@ -13,7 +12,7 @@ const categories = {
     'alive','allvar','ping','ping2','runtime','repo','channel','support','csave','body','available','composing','status'
   ],
   '👑 OWNER-CMD': [
-    'antidelete','block','unblock','boom','mode','admin-events','welcome','anti-call','goodbye','auto-typing','mention-reply','always-online','auto-recording','auto-seen','status-react','read-message','auto-voice','auto-sticker','auto-reply','auto-react','owner-react','jid','get','getpp','getpp','out','update','pmforward','vv2','restart','spam','ask','ask','tovv','vv','wa'
+    'antidelete','block','unblock','boom','mode','admin-events','welcome','anti-call','goodbye','auto-typing','mention-reply','always-online','auto-recording','auto-seen','status-react','read-message','auto-voice','auto-sticker','auto-reply','auto-react','owner-react','jid','get','getpp','out','update','pmforward','vv2','restart','spam','ask','tovv','vv','wa'
   ],
   '🏮 DOWNLOAD-CMD': [
     'apk','fbdl','image','img2','igdl','igdl4','ig2','ig3','ringtone','tiktok','tiktok2','ytpost','twitter','mediafire','gdrive','snap','gitclone','movieinfo','pinterest','sptdl','video','play','song2'
@@ -46,10 +45,10 @@ function menuString(config){
   for(const [title, cmds] of Object.entries(categories)){
     out.push(`*${title}*`);
     out.push(line);
-    out.push(cmds.map(c => `${bullet} ${c}*`).join('\\n'));
+    out.push(cmds.map(c => `${bullet} ${c}*`).join('\n'));
     out.push(end);
   }
-  return '\\n' + out.join('\\n');
+  return '\n' + out.join('\n');
 }
 
 module.exports = { categories, menuString };

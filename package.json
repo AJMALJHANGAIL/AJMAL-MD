@@ -1,11 +1,10 @@
 {
-  "name": "legendx-md",
+  "name": "legendx-md-deploy",
   "version": "5.0.0",
-  "description": "Full styled WhatsApp MD Bot template with category menu and placeholder commands",
+  "description": "Deploy-ready LegendX-MD WhatsApp bot scaffold",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "node index.js"
+    "start": "node index.js"
   },
   "engines": {
     "node": ">=18"

@@ -1,4 +1,3 @@
-
 require('dotenv').config();
 const {
   default: makeWASocket,
@@ -13,7 +12,6 @@ const fs = require('fs');
 const path = require('path');
 const qrcode = require('qrcode-terminal');
 const express = require('express');
-
 const config = require('./config');
 
 const app = express();
@@ -30,6 +28,7 @@ function register(def) {
 
 function loadPlugins() {
   const dir = path.join(__dirname, 'plugins');
+  if(!fs.existsSync(dir)) return;
   const files = fs.readdirSync(dir).filter(f => f.endsWith('.js'));
   files.forEach(f => {
     const plug = require(path.join(dir, f));
@@ -46,7 +45,7 @@ function buildCard({ timeStr }) {
     `*│ 👑 ᴄʀᴇᴀᴛᴏʀ:* ${config.CREATOR}`,
     `*│ ⏰ ᴛɪᴍᴇ ɴᴏᴡ:* ${timeStr}`,
     `*╰${'┈─────────────────┈'}⊷*`
-  ].join('\n');
+  ].join('\\n');
 }
 
 async function start() {
@@ -94,11 +93,11 @@ async function start() {
         buildCard({ timeStr: new Date().toLocaleTimeString() }),
         '',
         '*I am alive & running ✅*'
-      ].join('\n'));
+      ].join('\\n'));
     }
     if (command === 'menu') {
       const menuText = require('./plugins/menu').menuString(require('./config'));
-      return reply([buildCard({ timeStr: new Date().toLocaleTimeString() }), menuText].join('\n'));
+      return reply([buildCard({ timeStr: new Date().toLocaleTimeString() }), menuText].join('\\n'));
     }
 
     const def = registry.get(command);

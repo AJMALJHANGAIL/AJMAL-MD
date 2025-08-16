@@ -1,4 +1,3 @@
-
 module.exports = {
   PREFIX: '.',
   MODE: 'public',

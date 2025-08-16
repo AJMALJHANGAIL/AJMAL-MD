@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  legendx:
+    build: .
+    container_name: legendx-md
+    restart: unless-stopped
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./sessions:/app/sessions
+    environment:
+      - SESSION_ID=${SESSION_ID}
